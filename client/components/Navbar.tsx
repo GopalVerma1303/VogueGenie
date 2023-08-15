@@ -26,7 +26,7 @@ function Navbar() {
       >
         <div className=" justify-between mx-auto  md:items-center md:flex md:px-8 ">
           <div>
-            <div className=" flex flex-row items-center justify-center py-3">
+            <div className=" flex flex-row items-center justify-center py-3 px-8">
               <Link href="/" className=" flex justify-center items-center">
                 <Image
                   src={aladdinGenieImageSrc}
@@ -59,7 +59,7 @@ function Navbar() {
                   onClick={() => signOut()}
                   src={session.user?.image!}
                   alt="Profile Pic"
-                  className="h-10 w-10 ml-2"
+                  className="h-10 w-10 ml-2 hover:cursor-pointer"
                 />
               </div>
             )}

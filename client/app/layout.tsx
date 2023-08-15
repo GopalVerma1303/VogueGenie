@@ -6,6 +6,8 @@ import { authOptions } from "@/pages/api/auth/[...nextauth]";
 import Navbar from "@/components/Navbar";
 import Login from "@/components/Login";
 import Colors from "@/assets/theme/colors";
+import ChatInput from "@/components/ChatInput";
+import Chat from "@/components/Chat";
 
 export const metadata = {
   title: "VogueGenie",
@@ -21,30 +23,28 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <head />
-      <body>
+      <body style={{ backgroundColor: Colors.darkpurple }}>
         <SessionProvider session={session}>
           {!session ? (
             <Login />
           ) : (
             <div className="flex flex-col h-screen">
-              <div className="flex">
+              <div className="flex py-1">
                 <Navbar />
               </div>
               <div
-                className=" mt-16 flex h-full"
-                style={{ backgroundColor: Colors.bgwhite }}
+                className="mt-16 flex h-full w-full"
+                // style={{ backgroundColor: Colors.bgwhite }}
               >
-                <div className="max-w-xs h-full md:min-w-[20rem] py-3 px-2">
+                <div className="max-w-xs h-full md:min-w-[20rem] py-3 px-2 top-0 left-0">
                   <SideBar />
+                </div>
+                <div className="w-full flex flex-col justify-between h-full">
+                  <div className="h-full">
+                    <Chat chatId={""} />
+                  </div>
                 </div>
               </div>
-
-              {/* <div className="flex h-full bg-red-500" >
-                <div className="max-w-xs h-full md:min-w-[20rem] bg-green-500">
-                  <SideBar />
-                </div>
-                <div className="flex-1">{children}</div>
-              </div> */}
             </div>
           )}
         </SessionProvider>

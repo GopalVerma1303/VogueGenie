@@ -22,18 +22,14 @@ const NewChat = () => {
     router.push(`/chat/${doc.id}`);
   };
   return (
-    // <div onClick={createNewChat} className='border-gray-700 border chatRow'>
-    //     <PlusIcon className='h-4 w-4'/>
-    //     <p>NewChat</p>
-    // </div>
     <div
       onClick={createNewChat}
-      className=" p-2 flex m-3 justify-center items-center"
+      className=" p-2  m-3 justify-center items-center rounded-sm flex-1"
       style={{ backgroundColor: Colors.orange }}
     >
       <div className="text-white flex justify-center items-center hover:cursor-pointer">
-        <PlusIcon className="h-5 w-5 mr-2"/>
-        <p>NEW CHAT</p>
+        {/* <PlusIcon className="h-5 w-5 mx-2"/> */}
+        <p className=" text-sm">NEW CHAT</p>
       </div>
     </div>
   );
