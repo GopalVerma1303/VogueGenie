@@ -20,23 +20,23 @@ const SideBar = () => {
   );
   return (
     <div
-      className="flex flex-col h-full"
-      style={{ backgroundColor: Colors.fgwhite }}
-    >
-      <div className="flex-1">
-        <div>
-          <NewChat />
-          {/* {NewChat} */}
-          <div>{/* Model Selection */}</div>
-          {/* Mapping here */}
-          <div className=" px-5 mt-5">
-            {chats?.docs.map((chat) => (
-              <ChatRow key={chat.id} id={chat.id} />
-            ))}
-          </div>
+    className="flex flex-col h-full"
+    style={{ backgroundColor: Colors.fgwhite }}
+  >
+    <div className="flex-1">
+      <div>
+        <NewChat />
+        {/* {NewChat} */}
+        <div>{/* Model Selection */}</div>
+        {/* Mapping here */}
+        <div className="px-5 mt-5 overflow-y-auto flex-grow max-h-[calc(100vh-10rem)]">
+          {chats?.docs.map((chat) => (
+            <ChatRow key={chat.id} id={chat.id} />
+          ))}
         </div>
       </div>
     </div>
+  </div>
   );
 };
 
