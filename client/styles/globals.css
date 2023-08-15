@@ -32,7 +32,7 @@ body {
       @apply p-4 bg-gray-700/50 rounded-lg max-w-[300px]
     }
     .chatRow{
-      @apply rounded-lg px-5 py-3 text-sm flex items-center justify-center space-x-2 hover:bg-gray-700/50 cursor-pointer text-gray-300 transition-all duration-200 ease-out
+      @apply  px-5 py-2 my-2 text-sm flex items-center justify-center space-x-2 cursor-pointer transition-all duration-200 ease-out text-xs
     }
 }
 
