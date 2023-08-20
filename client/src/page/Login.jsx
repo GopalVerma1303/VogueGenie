@@ -3,6 +3,7 @@ import React from "react";
 // import Image from "next/image";
 import aladdinGenieImageSrc from "../assets/images/logo.png";
 import Colors from "../assets/theme/colors";
+import { Link } from "react-router-dom";
 import {
     FaFacebookF,
     FaGoogle,
@@ -15,7 +16,7 @@ import { MdLockOutline } from "react-icons/md";
 const Login = () => {
     return (
         <div
-            className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center  "
+            className="flex flex-col items-center justify-center w-full flex-1  text-center  "
         >
             <div className="flex  shadow-2xl w-2/3 max-w-4xl rounded-2xl ">
                 <div
@@ -91,9 +92,11 @@ const Login = () => {
                                 </label>
                                 <a href="#" className=" text-xs">Forget Password?</a>
                             </div>
-                            <div className=" w-80 p-2 flex my-3 justify-center items-center rounded-lg" style={{ backgroundColor: Colors.purple }}>
-                                <p className="text-white font-semibold">SIGN IN</p>
-                            </div>
+                            <Link to={'/home'}>
+                                <div className=" w-80 p-2 flex my-3 justify-center items-center rounded-lg" style={{ backgroundColor: Colors.purple }}>
+                                    <p className="text-white font-semibold">SIGN IN</p>
+                                </div>
+                            </Link>
                         </div>
                     </div>
                 </div>
