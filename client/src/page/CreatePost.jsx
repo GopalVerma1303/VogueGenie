@@ -95,13 +95,13 @@ const CreatePost = () => {
                 <p>+ New Chat</p>
               </div>
               <div className='my-3 px-2  overflow-y-auto h-[calc(100vh-290px)] '>
-                {[...Array(1)].map((_, index) => (
+                {[...Array(10)].map((_, index) => (
                   <div className='rounded-lg py-1 items-center justify-between flex text-sm text-[#666e75]' key={index}>
                     <div className=' flex items-center'>
                       <div className=' flex justify-center items-center bg-gray-200 rounded-full p-2 mr-1'>
                         <BiMessageSquareDetail />
                       </div>
-                      <p className=' hover:cursor-pointer'>Chat #1</p>
+                      <p className=' hover:cursor-pointer'>Chat #{index+1}</p>
                     </div>
                     <div className=' justify-center items-center flex hover:cursor-pointer'>
                       <BiMenu />

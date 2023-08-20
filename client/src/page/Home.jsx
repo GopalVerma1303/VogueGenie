@@ -2,6 +2,14 @@ import React, { useEffect, useState } from 'react';
 
 import { Card, FormField, Loader } from '../components';
 
+import { FaHandHoldingHeart } from "react-icons/fa";
+
+import { GiMagicLamp } from "react-icons/gi";
+
+import { BsFire } from "react-icons/bs";
+
+import { Link } from 'react-router-dom';
+
 const RenderCards = ({ data, title }) => {
   if (data?.length > 0) {
     return (
@@ -63,19 +71,33 @@ const Home = () => {
   return (
     <section className="max-w-7xl mx-auto">
       <div>
-        <h1 className="font-extrabold text-[#222328] text-[32px]">The Community Showcase</h1>
-        <p className="mt-2 text-[#666e75] text-[14px] max-w-[500px]">Browse through a collection of imaginative and visually stunning images generated our VogueGenieGAN Model</p>
+        <h1 className="font-extrabold text-[#222328] text-[32px]">Welcome to </h1>
+        <h1 className="font-extrabold text-[#222328] text-[64px] -mt-5">Vogue<span className='text-[#6469ff]'>Genie</span></h1>
+        <p className="mt-2 text-[#666e75] text-[14px] max-w-[500px]">Browse through a collection of imaginative and visually stunning images generated our VogueGenieGAN Model ✨</p>
       </div>
 
-      <div className="mt-16">
-        <FormField
-          labelName="Search posts"
-          type="text"
-          name="text"
-          placeholder="Search something..."
-          value={searchText}
-          handleChange={handleSearchChange}
-        />
+      <div className='mt-16 flex justify-between items-center'>
+        <div className=" flex w-1/2">
+          <FormField
+            labelName="Search posts"
+            type="text"
+            name="text"
+            placeholder="Search something..."
+            value={searchText}
+            handleChange={handleSearchChange}
+          />
+        </div>
+        <div className=' flex space-x-2'>
+          <div className=' flex'>
+            <Link to="/chatbot" className="font-inter flex font-medium text-[#6469ff] bg-[#dcdffd] justify-center items-center  px-4 py-2 rounded-md gap-2"><FaHandHoldingHeart />Recomended</Link>
+          </div>
+          <div className=' flex'>
+            <Link to="/chatbot" className="font-inter flex font-medium text-[#6469ff] bg-[#dcdffd]  justify-center items-center px-4 py-2 rounded-md gap-2"><BsFire />Trending</Link>
+          </div>
+          <div className=' flex'>
+            <Link to="/chatbot" className="font-inter flex font-medium text-[#6469ff] bg-[#dcdffd] justify-center items-center px-4 py-2 rounded-md gap-2"><GiMagicLamp className=' text-2xl'/> Chatbot</Link>
+          </div>
+        </div>
       </div>
 
       <div className="mt-10">
