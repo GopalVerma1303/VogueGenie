@@ -231,21 +231,6 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
-<!-- CONTACT -->
-## Contact
-
-Adrishyantee Maiti - [@adrishyantee](https://linkedin.com/in/adrishyantee) - adrishyantee@gmail.com
-
-Debanjan Poddar - [@debanjan](https://linkedin.com/in/debanjan-poddar) - debanjan.edu.2002@gmail.com
-
-Project Link: [https://github.com/debanjan-2002/fashion-flair](https://github.com/debanjan-2002/fashion-flair)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
