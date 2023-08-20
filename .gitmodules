@@ -1,4 +1,4 @@
-[submodule = "ClothingGAN"]
+[submodule "ClothingGAN"]
     path = model/GAN/ClothingGAN
     url = https://github.com/mfrashad/ClothingGAN.git
 
