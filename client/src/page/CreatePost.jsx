@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
+// import { PaperAirplaneIcon } from "@heroicons/react/24/solid";
+import { BiMessageSquareDetail, BiMenu } from "react-icons/bi";
 import { preview } from '../assets';
 import { getRandomPrompt } from '../utils';
 import { FormField, Loader } from '../components';
+
+import { PiPaperPlaneRightBold } from "react-icons/pi";
 
 const CreatePost = () => {
   const navigate = useNavigate();
@@ -161,7 +164,17 @@ const CreatePost = () => {
               </div>
               <div className='my-3 px-2  overflow-y-auto h-[calc(100vh-290px)] '>
                 {[...Array(10)].map((_, index) => (
-                  <div className='rounded-lg py-1 text-sm text-[#666e75]' key={index}>This is div {index + 1}</div>
+                  <div className='rounded-lg py-1 items-center justify-between flex text-sm text-[#666e75]' key={index}>
+                    <div className=' flex items-center'>
+                      <div className=' flex justify-center items-center bg-gray-200 rounded-full p-2 mr-1'>
+                        <BiMessageSquareDetail />
+                      </div>
+                      <p className=' hover:cursor-pointer'>This is div {index + 1}</p>
+                    </div>
+                    <div className=' justify-center items-center flex hover:cursor-pointer'>
+                      <BiMenu />
+                    </div>
+                  </div>
                 ))}
               </div>
             </div>
@@ -184,15 +197,14 @@ const CreatePost = () => {
                 <input
                   className="bg-transparent focus:outline-none flex-1 disabled:cursor-not-allowed disabled:text-gray-300"
                   type="text"
-                  placeholder="Enter a prompt here"
+                  placeholder="What you are looking for....?"
                 />
                 <button
                   className="flex bg-[#6469ff] hover:opacity-50 text-white font-bold px-2 py-2 rounded-lg disabled:bg-gray-300 disabled:cursor-not-allowed"
                   type="submit"
                 >
-                  {/* <PaperAirplaneIcon className="w-5 h-5" /> */} Send
+                  <PiPaperPlaneRightBold className="w-5 h-5" />
                 </button>
-
               </form>
             </div>
           </div>
