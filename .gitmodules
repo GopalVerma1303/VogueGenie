@@ -1,0 +1,5 @@
+[submodule = "clothingGan"]
+    path = "model/GAN/ClothingGAN"
+    url = "https://github.com/mfrashad/ClothingGAN.git" 
+    ignore = untracked
+    
