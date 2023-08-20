@@ -8,10 +8,10 @@
     <img src="client/src/assets/images/logo.png" alt="Logo" height="80">
   </a>
 
-  <h3 align="center">Fashion Flair</h3>
+  <h3 align="center">VogueGenie</h3>
 
   <p align="center">
-    Your personalised AI fashion assistant!
+    Your AI Fashion Genie in a cart ✨
     <br />
     <br />
     <a href="https://drive.google.com/file/d/15npijRBBu_C_8RcDOkOm34US6frD4VZi/view?usp=share_link">View Demo</a>
