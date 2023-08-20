@@ -174,19 +174,48 @@ const CreatePost = () => {
         </div>
         <div className="w-4/5 h-full p-3">
           <div className=' h-full bg-white rounded-2xl shadow-lg flex flex-col justify-between p-3'>
-            <div className=' flex flex-col overflow-y-auto h-[calc(100vh-235px)] my-5 -mt-0.5'>
-              {[...Array(100)].map((_, index) => (
+            <div className=' flex flex-col overflow-y-auto my-5 -mt-0.5 w-64 p-3 h-64'>
+            { form.photo ? (
+              <img
+                src={form.photo}
+                alt={form.prompt}
+                className="w-full h-full object-contain"
+              />
+            ) : (
+              <img
+                src={preview}
+                alt="preview"
+                className="w-9/12 h-9/12 object-contain opacity-40"
+              />
+            )}
+
+            {generatingImg && (
+              <div className="absolute inset-0 z-0 flex justify-center items-center bg-[rgba(0,0,0,0.5)] rounded-lg">
+                <Loader />
+              </div>
+            )}
+              {/* {[...Array(100)].map((_, index) => (
                 <div className='rounded-lg py-1 text-sm text-[#666e75]' key={index}>This is div {index + 1}</div>
-              ))}
+              ))} */}
             </div>
             <div className=' flex px-5 py-4 bg-[#e6ebf4] rounded-xl'>
-              <form className='flex space-x-5 p-0 justify-center items-center flex-1'>
-                <input
+              <form onSubmit={handleSubmit} className='flex space-x-5 p-0 justify-between items-center flex-1'>
+              <FormField
+            // labelName="Prompt"
+            type="text"
+            name="prompt"
+            placeholder="An Impressionist oil painting of sunflowers in a purple vase…"
+            value={form.prompt}
+            handleChange={handleChange}
+            // isSurpriseMe
+            handleSurpriseMe={handleSurpriseMe}
+          />
+                {/* <input 
                   className="bg-transparent focus:outline-none flex-1 disabled:cursor-not-allowed disabled:text-gray-300"
                   type="text"
                   placeholder="Enter a prompt here"
-                />
-                <button
+                /> */}
+                <button onClick={generateImage}
                   className="flex bg-[#6469ff] hover:opacity-50 text-white font-bold px-2 py-2 rounded-lg disabled:bg-gray-300 disabled:cursor-not-allowed"
                   type="submit"
                 >
