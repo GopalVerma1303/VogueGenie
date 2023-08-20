@@ -15,12 +15,11 @@ import { MdLockOutline } from "react-icons/md";
 const Login = () => {
     return (
         <div
-            className="flex flex-col items-center justify-center w-full h-screen flex-1 px-20 text-center "
-            style={{ backgroundColor: Colors.bgwhite }}
+            className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center  "
         >
-            <div className="flex  shadow-2xl w-2/3 max-w-4xl ">
+            <div className="flex  shadow-2xl w-2/3 max-w-4xl rounded-2xl ">
                 <div
-                    className="w-2/5 py-32 px-12"
+                    className="w-2/5 py-32 px-12 rounded-2xl"
                     style={{ backgroundColor: Colors.purple }}
                 >
                     <div className=" pb-3">
@@ -31,7 +30,7 @@ const Login = () => {
                         <div className="border-2 w-10 inline-block mb-10"></div>
                     </div>
                     <div className=" pt-3">
-                        <Image
+                        <img
                             src={aladdinGenieImageSrc}
                             width={300}
                             height={300}
@@ -92,7 +91,7 @@ const Login = () => {
                                 </label>
                                 <a href="#" className=" text-xs">Forget Password?</a>
                             </div>
-                            <div className=" w-80 p-2 flex my-3 justify-center items-center" style={{ backgroundColor: Colors.orange }}>
+                            <div className=" w-80 p-2 flex my-3 justify-center items-center rounded-lg" style={{ backgroundColor: Colors.purple }}>
                                 <p className="text-white font-semibold">SIGN IN</p>
                             </div>
                         </div>
@@ -104,10 +103,3 @@ const Login = () => {
 };
 
 export default Login;
-
-// <div className='bg-[#11A37F] h-screen flex flex-col items-center justify-center text-center'>
-//  <Image
-//  src="https://e0.pxfuel.com/wallpapers/351/656/desktop-wallpaper-transparent-aladdin-genie-png.jpg" width = {300} height = {300} alt = "logo" />
-//  <button onClick={() => signIn("google")} className='text-white font-bold text-3xl animate-pulse'>Sign In to Use VogueGenie</button>
-// </div>
-// VogueGenie: Your AI Fashion Genie in a Bottle
